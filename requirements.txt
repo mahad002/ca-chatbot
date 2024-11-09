@@ -1,0 +1,15 @@
+Flask
+requests
+beautifulsoup4
+markdownify
+hashlib
+re
+langchain
+langchain_community
+langchain_core
+langchain_openai
+langchain_text_splitters
+langgraph
+langchain.schema
+langserve
+python-dotenv

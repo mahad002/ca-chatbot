@@ -1,15 +1,11 @@
-Flask
-requests
-beautifulsoup4
-markdownify
-hashlib
-re
-langchain
-langchain_community
-langchain_core
-langchain_openai
-langchain_text_splitters
-langgraph
-langchain.schema
-langserve
-python-dotenv
+Flask==2.3.3
+flask_cors==3.1.1
+requests==2.31.0
+beautifulsoup4==4.11.2
+python-dotenv==1.0.0
+langsmith==0.0.1  # Adjust the version as per your actual version
+langchain==0.11.0  # Adjust the version as per your actual version
+langchain-openai==0.4.0  # Adjust the version as per your actual version
+langchain-text-splitters==0.1.0  # Adjust the version as per your actual version
+langchain-community==0.0.2  # Adjust the version as per your actual version
+langgraph==0.1.0  # Adjust the version as per your actual version

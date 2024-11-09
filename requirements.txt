@@ -3,9 +3,10 @@ flask_cors
 requests==2.31.0
 beautifulsoup4==4.11.2
 python-dotenv==1.0.0
-langsmith==0.1.142  # Adjust the version as per your actual version
-langchain==0.3.7  # Adjust the version as per your actual version
-langchain-openai==0.2.6  # Adjust the version as per your actual version
-langchain-text-splitters==0.3.2  # Adjust the version as per your actual version
-langchain-community==0.3.5  # Adjust the version as per your actual version
-langgraph==0.2.45  # Adjust the version as per your actual version
+langsmith==0.1.142
+langchain==0.3.7
+langchain-openai==0.2.6
+langchain-text-splitters==0.3.2
+langchain-community==0.3.5
+langgraph==0.2.45
+gunicorn==23.0.0

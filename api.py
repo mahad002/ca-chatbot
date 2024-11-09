@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Import CORS for handling cross-origin requests
 import requests
 from bs4 import BeautifulSoup, SoupStrainer
 from dotenv import load_dotenv
@@ -13,14 +14,18 @@ from langgraph.checkpoint.memory import MemorySaver
 from langgraph.prebuilt import create_react_agent
 from langchain.schema import HumanMessage
 
+# Initialize Flask app
 app = Flask(__name__)
+
+# Initialize CORS to allow cross-origin requests
+CORS(app)  # You can configure CORS options here if needed
 
 # Load environment variables from .env file
 load_dotenv()
 
 # Configure LangSmith environment variables for tracing
 os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
-os.environ["LANGCHAIN_ENDPOINT"] ="https://api.smith.langchain.com"
+os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_PROJECT"] = "pr-large-cluster-52"
 
@@ -118,6 +123,6 @@ def query_handler():
     # Return the concatenated response as JSON
     return jsonify({"response": " ".join(response_messages)})
 
-# Run the Flask app
+# Run the Flask app on a specified port
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
